@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A89C4BE7445B10F324311BC /* Pods_UFPhotoPickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC0A7770DEF0017D1AAEAA7 /* Pods_UFPhotoPickerTests.framework */; };
+		3EF0A317C28900DF02EABFCC /* Pods_UFPhotoPickerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9DBD6C63973DF53AA0ADF2 /* Pods_UFPhotoPickerUITests.framework */; };
+		651334884A7D0179CFD9A6DE /* Pods_UFPhotoPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE3F6B43ACB398A09DAAC3D /* Pods_UFPhotoPicker.framework */; };
 		F859A65621AFB6D8002518CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A65521AFB6D8002518CC /* AppDelegate.swift */; };
 		F859A65821AFB6D8002518CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A65721AFB6D8002518CC /* ViewController.swift */; };
 		F859A65B21AFB6D8002518CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F859A65921AFB6D8002518CC /* Main.storyboard */; };
@@ -14,6 +17,21 @@
 		F859A66021AFB6D9002518CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F859A65E21AFB6D9002518CC /* LaunchScreen.storyboard */; };
 		F859A66B21AFB6D9002518CC /* UFPhotoPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A66A21AFB6D9002518CC /* UFPhotoPickerTests.swift */; };
 		F859A67621AFB6D9002518CC /* UFPhotoPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A67521AFB6D9002518CC /* UFPhotoPickerUITests.swift */; };
+		F859A68621AFB78E002518CC /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A68421AFB78E002518CC /* AlbumViewController.swift */; };
+		F859A68721AFB78E002518CC /* PhotoGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A68521AFB78E002518CC /* PhotoGridViewController.swift */; };
+		F859A68E21AFB793002518CC /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A68A21AFB793002518CC /* AlbumTableViewCell.swift */; };
+		F859A68F21AFB793002518CC /* AuthLockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A68B21AFB793002518CC /* AuthLockView.swift */; };
+		F859A69021AFB793002518CC /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A68C21AFB793002518CC /* PhotoCollectionViewCell.swift */; };
+		F859A69621AFB797002518CC /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A69221AFB797002518CC /* Metadata.swift */; };
+		F859A69721AFB797002518CC /* MetadataPlus.plist in Resources */ = {isa = PBXBuildFile; fileRef = F859A69321AFB797002518CC /* MetadataPlus.plist */; };
+		F859A69821AFB797002518CC /* DetailCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A69421AFB797002518CC /* DetailCellModel.swift */; };
+		F859A69921AFB797002518CC /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A69521AFB797002518CC /* LocationModel.swift */; };
+		F859A6A121AFB79C002518CC /* CLLocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A69B21AFB79C002518CC /* CLLocationExtension.swift */; };
+		F859A6A221AFB79C002518CC /* PHPhotoLibraryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A69C21AFB79C002518CC /* PHPhotoLibraryExtension.swift */; };
+		F859A6A321AFB79C002518CC /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A69D21AFB79C002518CC /* UIViewExtension.swift */; };
+		F859A6A421AFB79C002518CC /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A69E21AFB79C002518CC /* StringExtension.swift */; };
+		F859A6A521AFB79C002518CC /* PHAssetCollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A69F21AFB79C002518CC /* PHAssetCollectionExtension.swift */; };
+		F859A6A621AFB79C002518CC /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A6A021AFB79C002518CC /* DateFormatterExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +52,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02666005E558119F947CC956 /* Pods-UFPhotoPickerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFPhotoPickerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UFPhotoPickerUITests/Pods-UFPhotoPickerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		47609E96DB6F5A4666F2BE9F /* Pods-UFPhotoPickerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFPhotoPickerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UFPhotoPickerUITests/Pods-UFPhotoPickerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5B8E99B3FFF86B281A54148D /* Pods-UFPhotoPickerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFPhotoPickerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UFPhotoPickerTests/Pods-UFPhotoPickerTests.release.xcconfig"; sourceTree = "<group>"; };
+		6AE3F6B43ACB398A09DAAC3D /* Pods_UFPhotoPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UFPhotoPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B18E61E0873F76FF1C18E91 /* Pods-UFPhotoPickerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFPhotoPickerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UFPhotoPickerTests/Pods-UFPhotoPickerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ACC0A7770DEF0017D1AAEAA7 /* Pods_UFPhotoPickerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UFPhotoPickerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0BE9CF2AAA0681DC711C90E /* Pods-UFPhotoPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFPhotoPicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UFPhotoPicker/Pods-UFPhotoPicker.debug.xcconfig"; sourceTree = "<group>"; };
+		BE9DBD6C63973DF53AA0ADF2 /* Pods_UFPhotoPickerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UFPhotoPickerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C20DB4C8ADF4A5617B7D674A /* Pods-UFPhotoPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFPhotoPicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-UFPhotoPicker/Pods-UFPhotoPicker.release.xcconfig"; sourceTree = "<group>"; };
 		F859A65221AFB6D8002518CC /* UFPhotoPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UFPhotoPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F859A65521AFB6D8002518CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F859A65721AFB6D8002518CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +74,21 @@
 		F859A67121AFB6D9002518CC /* UFPhotoPickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UFPhotoPickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F859A67521AFB6D9002518CC /* UFPhotoPickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UFPhotoPickerUITests.swift; sourceTree = "<group>"; };
 		F859A67721AFB6D9002518CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F859A68421AFB78E002518CC /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		F859A68521AFB78E002518CC /* PhotoGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGridViewController.swift; sourceTree = "<group>"; };
+		F859A68A21AFB793002518CC /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		F859A68B21AFB793002518CC /* AuthLockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthLockView.swift; sourceTree = "<group>"; };
+		F859A68C21AFB793002518CC /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		F859A69221AFB797002518CC /* Metadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metadata.swift; sourceTree = "<group>"; };
+		F859A69321AFB797002518CC /* MetadataPlus.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MetadataPlus.plist; sourceTree = "<group>"; };
+		F859A69421AFB797002518CC /* DetailCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCellModel.swift; sourceTree = "<group>"; };
+		F859A69521AFB797002518CC /* LocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
+		F859A69B21AFB79C002518CC /* CLLocationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationExtension.swift; sourceTree = "<group>"; };
+		F859A69C21AFB79C002518CC /* PHPhotoLibraryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHPhotoLibraryExtension.swift; sourceTree = "<group>"; };
+		F859A69D21AFB79C002518CC /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		F859A69E21AFB79C002518CC /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		F859A69F21AFB79C002518CC /* PHAssetCollectionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHAssetCollectionExtension.swift; sourceTree = "<group>"; };
+		F859A6A021AFB79C002518CC /* DateFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				651334884A7D0179CFD9A6DE /* Pods_UFPhotoPicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A89C4BE7445B10F324311BC /* Pods_UFPhotoPickerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +112,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EF0A317C28900DF02EABFCC /* Pods_UFPhotoPickerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32D1136C61639FC2EBAB3427 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AE3F6B43ACB398A09DAAC3D /* Pods_UFPhotoPicker.framework */,
+				ACC0A7770DEF0017D1AAEAA7 /* Pods_UFPhotoPickerTests.framework */,
+				BE9DBD6C63973DF53AA0ADF2 /* Pods_UFPhotoPickerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		36D260B6ABE981D6D5E356A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0BE9CF2AAA0681DC711C90E /* Pods-UFPhotoPicker.debug.xcconfig */,
+				C20DB4C8ADF4A5617B7D674A /* Pods-UFPhotoPicker.release.xcconfig */,
+				8B18E61E0873F76FF1C18E91 /* Pods-UFPhotoPickerTests.debug.xcconfig */,
+				5B8E99B3FFF86B281A54148D /* Pods-UFPhotoPickerTests.release.xcconfig */,
+				47609E96DB6F5A4666F2BE9F /* Pods-UFPhotoPickerUITests.debug.xcconfig */,
+				02666005E558119F947CC956 /* Pods-UFPhotoPickerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F859A64921AFB6D8002518CC = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +149,8 @@
 				F859A66921AFB6D9002518CC /* UFPhotoPickerTests */,
 				F859A67421AFB6D9002518CC /* UFPhotoPickerUITests */,
 				F859A65321AFB6D8002518CC /* Products */,
+				36D260B6ABE981D6D5E356A4 /* Pods */,
+				32D1136C61639FC2EBAB3427 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +167,10 @@
 		F859A65421AFB6D8002518CC /* UFPhotoPicker */ = {
 			isa = PBXGroup;
 			children = (
+				F859A69A21AFB79C002518CC /* Extensions */,
+				F859A69121AFB797002518CC /* Models */,
+				F859A68821AFB793002518CC /* Views */,
+				F859A68321AFB78E002518CC /* Controllers */,
 				F859A65521AFB6D8002518CC /* AppDelegate.swift */,
 				F859A65721AFB6D8002518CC /* ViewController.swift */,
 				F859A65921AFB6D8002518CC /* Main.storyboard */,
@@ -125,6 +199,49 @@
 			path = UFPhotoPickerUITests;
 			sourceTree = "<group>";
 		};
+		F859A68321AFB78E002518CC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F859A68421AFB78E002518CC /* AlbumViewController.swift */,
+				F859A68521AFB78E002518CC /* PhotoGridViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F859A68821AFB793002518CC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F859A68A21AFB793002518CC /* AlbumTableViewCell.swift */,
+				F859A68B21AFB793002518CC /* AuthLockView.swift */,
+				F859A68C21AFB793002518CC /* PhotoCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F859A69121AFB797002518CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F859A69221AFB797002518CC /* Metadata.swift */,
+				F859A69321AFB797002518CC /* MetadataPlus.plist */,
+				F859A69421AFB797002518CC /* DetailCellModel.swift */,
+				F859A69521AFB797002518CC /* LocationModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F859A69A21AFB79C002518CC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F859A69B21AFB79C002518CC /* CLLocationExtension.swift */,
+				F859A69C21AFB79C002518CC /* PHPhotoLibraryExtension.swift */,
+				F859A69D21AFB79C002518CC /* UIViewExtension.swift */,
+				F859A69E21AFB79C002518CC /* StringExtension.swift */,
+				F859A69F21AFB79C002518CC /* PHAssetCollectionExtension.swift */,
+				F859A6A021AFB79C002518CC /* DateFormatterExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F859A67A21AFB6D9002518CC /* Build configuration list for PBXNativeTarget "UFPhotoPicker" */;
 			buildPhases = (
+				8523B6D54E2F59B91CFC1762 /* [CP] Check Pods Manifest.lock */,
 				F859A64E21AFB6D8002518CC /* Sources */,
 				F859A64F21AFB6D8002518CC /* Frameworks */,
 				F859A65021AFB6D8002518CC /* Resources */,
+				F1F79821DE7DE757F7E9C7DD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +268,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F859A67D21AFB6D9002518CC /* Build configuration list for PBXNativeTarget "UFPhotoPickerTests" */;
 			buildPhases = (
+				A1E29E4790654A084C474827 /* [CP] Check Pods Manifest.lock */,
 				F859A66221AFB6D9002518CC /* Sources */,
 				F859A66321AFB6D9002518CC /* Frameworks */,
 				F859A66421AFB6D9002518CC /* Resources */,
@@ -167,6 +287,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F859A68021AFB6D9002518CC /* Build configuration list for PBXNativeTarget "UFPhotoPickerUITests" */;
 			buildPhases = (
+				BE224D5E2DCF0C0FA597EA5D /* [CP] Check Pods Manifest.lock */,
 				F859A66D21AFB6D9002518CC /* Sources */,
 				F859A66E21AFB6D9002518CC /* Frameworks */,
 				F859A66F21AFB6D9002518CC /* Resources */,
@@ -231,6 +352,7 @@
 			files = (
 				F859A66021AFB6D9002518CC /* LaunchScreen.storyboard in Resources */,
 				F859A65D21AFB6D9002518CC /* Assets.xcassets in Resources */,
+				F859A69721AFB797002518CC /* MetadataPlus.plist in Resources */,
 				F859A65B21AFB6D8002518CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,13 +373,108 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8523B6D54E2F59B91CFC1762 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UFPhotoPicker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1E29E4790654A084C474827 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UFPhotoPickerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE224D5E2DCF0C0FA597EA5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UFPhotoPickerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1F79821DE7DE757F7E9C7DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-UFPhotoPicker/Pods-UFPhotoPicker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SkeletonView/SkeletonView.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkeletonView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UFPhotoPicker/Pods-UFPhotoPicker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F859A64E21AFB6D8002518CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F859A69821AFB797002518CC /* DetailCellModel.swift in Sources */,
+				F859A68E21AFB793002518CC /* AlbumTableViewCell.swift in Sources */,
+				F859A68621AFB78E002518CC /* AlbumViewController.swift in Sources */,
+				F859A69621AFB797002518CC /* Metadata.swift in Sources */,
 				F859A65821AFB6D8002518CC /* ViewController.swift in Sources */,
 				F859A65621AFB6D8002518CC /* AppDelegate.swift in Sources */,
+				F859A6A621AFB79C002518CC /* DateFormatterExtension.swift in Sources */,
+				F859A69021AFB793002518CC /* PhotoCollectionViewCell.swift in Sources */,
+				F859A6A121AFB79C002518CC /* CLLocationExtension.swift in Sources */,
+				F859A6A421AFB79C002518CC /* StringExtension.swift in Sources */,
+				F859A6A221AFB79C002518CC /* PHPhotoLibraryExtension.swift in Sources */,
+				F859A6A321AFB79C002518CC /* UIViewExtension.swift in Sources */,
+				F859A68721AFB78E002518CC /* PhotoGridViewController.swift in Sources */,
+				F859A69921AFB797002518CC /* LocationModel.swift in Sources */,
+				F859A68F21AFB793002518CC /* AuthLockView.swift in Sources */,
+				F859A6A521AFB79C002518CC /* PHAssetCollectionExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +580,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -418,7 +635,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -430,6 +647,7 @@
 		};
 		F859A67B21AFB6D9002518CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0BE9CF2AAA0681DC711C90E /* Pods-UFPhotoPicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -442,12 +660,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pisces.UFPhotoPicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		F859A67C21AFB6D9002518CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C20DB4C8ADF4A5617B7D674A /* Pods-UFPhotoPicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -460,12 +679,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pisces.UFPhotoPicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		F859A67E21AFB6D9002518CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B18E61E0873F76FF1C18E91 /* Pods-UFPhotoPickerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -487,6 +707,7 @@
 		};
 		F859A67F21AFB6D9002518CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B8E99B3FFF86B281A54148D /* Pods-UFPhotoPickerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +729,7 @@
 		};
 		F859A68121AFB6D9002518CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47609E96DB6F5A4666F2BE9F /* Pods-UFPhotoPickerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -528,6 +750,7 @@
 		};
 		F859A68221AFB6D9002518CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02666005E558119F947CC956 /* Pods-UFPhotoPickerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
