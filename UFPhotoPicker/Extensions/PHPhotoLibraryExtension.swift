@@ -1,9 +1,9 @@
 //
 //  PHPhotoLibraryExtension.swift
-//  MetaX
+//  UFPhotoPicker
 //
-//  Created by Ckitakishi on 2018/04/19.
-//  Copyright © 2018年 Yuhan Chen. All rights reserved.
+//  Created by 曹华 on 2018/11/28.
+//  Copyright © 2018年 曹华. All rights reserved.
 //
 
 import Photos
@@ -33,12 +33,7 @@ extension PHPhotoLibrary {
     
     class func guideToSetting() {
         DispatchQueue.main.async {
-            let url = URL(string: UIApplication.openSettingsURLString)
-            if #available(iOS 10.0, *) {
-                UIApplication.shared.open(url!, options: [:], completionHandler: nil)
-            } else {
-                // Fallback on earlier versions
-            }
+            UIApplication.shared.openURL(URL(string: UIApplication.openSettingsURLString)!)
         }
     }
 }

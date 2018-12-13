@@ -20,18 +20,14 @@
 		F859A68621AFB78E002518CC /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A68421AFB78E002518CC /* AlbumViewController.swift */; };
 		F859A68721AFB78E002518CC /* PhotoGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A68521AFB78E002518CC /* PhotoGridViewController.swift */; };
 		F859A68E21AFB793002518CC /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A68A21AFB793002518CC /* AlbumTableViewCell.swift */; };
-		F859A68F21AFB793002518CC /* AuthLockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A68B21AFB793002518CC /* AuthLockView.swift */; };
 		F859A69021AFB793002518CC /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A68C21AFB793002518CC /* PhotoCollectionViewCell.swift */; };
-		F859A69621AFB797002518CC /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A69221AFB797002518CC /* Metadata.swift */; };
-		F859A69721AFB797002518CC /* MetadataPlus.plist in Resources */ = {isa = PBXBuildFile; fileRef = F859A69321AFB797002518CC /* MetadataPlus.plist */; };
-		F859A69821AFB797002518CC /* DetailCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A69421AFB797002518CC /* DetailCellModel.swift */; };
-		F859A69921AFB797002518CC /* LocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A69521AFB797002518CC /* LocationModel.swift */; };
-		F859A6A121AFB79C002518CC /* CLLocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A69B21AFB79C002518CC /* CLLocationExtension.swift */; };
 		F859A6A221AFB79C002518CC /* PHPhotoLibraryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A69C21AFB79C002518CC /* PHPhotoLibraryExtension.swift */; };
 		F859A6A321AFB79C002518CC /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A69D21AFB79C002518CC /* UIViewExtension.swift */; };
 		F859A6A421AFB79C002518CC /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A69E21AFB79C002518CC /* StringExtension.swift */; };
 		F859A6A521AFB79C002518CC /* PHAssetCollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A69F21AFB79C002518CC /* PHAssetCollectionExtension.swift */; };
-		F859A6A621AFB79C002518CC /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A6A021AFB79C002518CC /* DateFormatterExtension.swift */; };
+		F8B09AC821C22B420067A2E1 /* PhotoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B09AC721C22B420067A2E1 /* PhotoProvider.swift */; };
+		F8B09ACB21C22B970067A2E1 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B09ACA21C22B970067A2E1 /* Base.swift */; };
+		F8B09ACE21C22BFF0067A2E1 /* UIApplication+Permissions.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B09ACD21C22BFF0067A2E1 /* UIApplication+Permissions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,18 +73,16 @@
 		F859A68421AFB78E002518CC /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		F859A68521AFB78E002518CC /* PhotoGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGridViewController.swift; sourceTree = "<group>"; };
 		F859A68A21AFB793002518CC /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
-		F859A68B21AFB793002518CC /* AuthLockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthLockView.swift; sourceTree = "<group>"; };
 		F859A68C21AFB793002518CC /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
-		F859A69221AFB797002518CC /* Metadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metadata.swift; sourceTree = "<group>"; };
-		F859A69321AFB797002518CC /* MetadataPlus.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MetadataPlus.plist; sourceTree = "<group>"; };
-		F859A69421AFB797002518CC /* DetailCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCellModel.swift; sourceTree = "<group>"; };
-		F859A69521AFB797002518CC /* LocationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationModel.swift; sourceTree = "<group>"; };
-		F859A69B21AFB79C002518CC /* CLLocationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLLocationExtension.swift; sourceTree = "<group>"; };
 		F859A69C21AFB79C002518CC /* PHPhotoLibraryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHPhotoLibraryExtension.swift; sourceTree = "<group>"; };
 		F859A69D21AFB79C002518CC /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		F859A69E21AFB79C002518CC /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		F859A69F21AFB79C002518CC /* PHAssetCollectionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHAssetCollectionExtension.swift; sourceTree = "<group>"; };
-		F859A6A021AFB79C002518CC /* DateFormatterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
+		F874892E21B12C5400CDBC32 /* UFPhotoPicker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UFPhotoPicker-Bridging-Header.h"; sourceTree = "<group>"; };
+		F8B09AC721C22B420067A2E1 /* PhotoProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoProvider.swift; sourceTree = "<group>"; };
+		F8B09ACA21C22B970067A2E1 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		F8B09ACC21C22BFF0067A2E1 /* UIApplication+Permissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Permissions.h"; sourceTree = "<group>"; };
+		F8B09ACD21C22BFF0067A2E1 /* UIApplication+Permissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Permissions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,12 +161,14 @@
 		F859A65421AFB6D8002518CC /* UFPhotoPicker */ = {
 			isa = PBXGroup;
 			children = (
+				F8B09AC921C22B8D0067A2E1 /* Common */,
+				F8B09AC621C22B420067A2E1 /* Provider */,
 				F859A69A21AFB79C002518CC /* Extensions */,
-				F859A69121AFB797002518CC /* Models */,
 				F859A68821AFB793002518CC /* Views */,
 				F859A68321AFB78E002518CC /* Controllers */,
 				F859A65521AFB6D8002518CC /* AppDelegate.swift */,
 				F859A65721AFB6D8002518CC /* ViewController.swift */,
+				F874892E21B12C5400CDBC32 /* UFPhotoPicker-Bridging-Header.h */,
 				F859A65921AFB6D8002518CC /* Main.storyboard */,
 				F859A65C21AFB6D9002518CC /* Assets.xcassets */,
 				F859A65E21AFB6D9002518CC /* LaunchScreen.storyboard */,
@@ -212,34 +208,38 @@
 			isa = PBXGroup;
 			children = (
 				F859A68A21AFB793002518CC /* AlbumTableViewCell.swift */,
-				F859A68B21AFB793002518CC /* AuthLockView.swift */,
 				F859A68C21AFB793002518CC /* PhotoCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		F859A69121AFB797002518CC /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				F859A69221AFB797002518CC /* Metadata.swift */,
-				F859A69321AFB797002518CC /* MetadataPlus.plist */,
-				F859A69421AFB797002518CC /* DetailCellModel.swift */,
-				F859A69521AFB797002518CC /* LocationModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		F859A69A21AFB79C002518CC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F859A69B21AFB79C002518CC /* CLLocationExtension.swift */,
+				F8B09ACC21C22BFF0067A2E1 /* UIApplication+Permissions.h */,
+				F8B09ACD21C22BFF0067A2E1 /* UIApplication+Permissions.m */,
 				F859A69C21AFB79C002518CC /* PHPhotoLibraryExtension.swift */,
 				F859A69D21AFB79C002518CC /* UIViewExtension.swift */,
 				F859A69E21AFB79C002518CC /* StringExtension.swift */,
 				F859A69F21AFB79C002518CC /* PHAssetCollectionExtension.swift */,
-				F859A6A021AFB79C002518CC /* DateFormatterExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F8B09AC621C22B420067A2E1 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				F8B09AC721C22B420067A2E1 /* PhotoProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		F8B09AC921C22B8D0067A2E1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F8B09ACA21C22B970067A2E1 /* Base.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +314,7 @@
 				TargetAttributes = {
 					F859A65121AFB6D8002518CC = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					F859A66521AFB6D9002518CC = {
 						CreatedOnToolsVersion = 10.1;
@@ -352,7 +353,6 @@
 			files = (
 				F859A66021AFB6D9002518CC /* LaunchScreen.storyboard in Resources */,
 				F859A65D21AFB6D9002518CC /* Assets.xcassets in Resources */,
-				F859A69721AFB797002518CC /* MetadataPlus.plist in Resources */,
 				F859A65B21AFB6D8002518CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,21 +459,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F859A69821AFB797002518CC /* DetailCellModel.swift in Sources */,
 				F859A68E21AFB793002518CC /* AlbumTableViewCell.swift in Sources */,
 				F859A68621AFB78E002518CC /* AlbumViewController.swift in Sources */,
-				F859A69621AFB797002518CC /* Metadata.swift in Sources */,
 				F859A65821AFB6D8002518CC /* ViewController.swift in Sources */,
+				F8B09AC821C22B420067A2E1 /* PhotoProvider.swift in Sources */,
 				F859A65621AFB6D8002518CC /* AppDelegate.swift in Sources */,
-				F859A6A621AFB79C002518CC /* DateFormatterExtension.swift in Sources */,
+				F8B09ACB21C22B970067A2E1 /* Base.swift in Sources */,
 				F859A69021AFB793002518CC /* PhotoCollectionViewCell.swift in Sources */,
-				F859A6A121AFB79C002518CC /* CLLocationExtension.swift in Sources */,
 				F859A6A421AFB79C002518CC /* StringExtension.swift in Sources */,
 				F859A6A221AFB79C002518CC /* PHPhotoLibraryExtension.swift in Sources */,
 				F859A6A321AFB79C002518CC /* UIViewExtension.swift in Sources */,
 				F859A68721AFB78E002518CC /* PhotoGridViewController.swift in Sources */,
-				F859A69921AFB797002518CC /* LocationModel.swift in Sources */,
-				F859A68F21AFB793002518CC /* AuthLockView.swift in Sources */,
+				F8B09ACE21C22BFF0067A2E1 /* UIApplication+Permissions.m in Sources */,
 				F859A6A521AFB79C002518CC /* PHAssetCollectionExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,6 +647,7 @@
 			baseConfigurationReference = B0BE9CF2AAA0681DC711C90E /* Pods-UFPhotoPicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2MQ84KXC4;
 				INFOPLIST_FILE = UFPhotoPicker/Info.plist;
@@ -659,6 +657,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pisces.UFPhotoPicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UFPhotoPicker/UFPhotoPicker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -669,6 +669,7 @@
 			baseConfigurationReference = C20DB4C8ADF4A5617B7D674A /* Pods-UFPhotoPicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A2MQ84KXC4;
 				INFOPLIST_FILE = UFPhotoPicker/Info.plist;
@@ -678,6 +679,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pisces.UFPhotoPicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UFPhotoPicker/UFPhotoPicker-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

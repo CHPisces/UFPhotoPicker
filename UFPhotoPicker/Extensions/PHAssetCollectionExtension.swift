@@ -1,9 +1,9 @@
 //
 //  PHAssetCollectionExtension.swift
-//  MetaX
+//  UFPhotoPicker
 //
-//  Created by Ckitakishi on 2018/3/22.
-//  Copyright © 2018年 Yuhan Chen. All rights reserved.
+//  Created by 曹华 on 2018/11/28.
+//  Copyright © 2018年 曹华. All rights reserved.
 //
 
 import Photos
