@@ -10,6 +10,13 @@
 		3A89C4BE7445B10F324311BC /* Pods_UFPhotoPickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC0A7770DEF0017D1AAEAA7 /* Pods_UFPhotoPickerTests.framework */; };
 		3EF0A317C28900DF02EABFCC /* Pods_UFPhotoPickerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE9DBD6C63973DF53AA0ADF2 /* Pods_UFPhotoPickerUITests.framework */; };
 		651334884A7D0179CFD9A6DE /* Pods_UFPhotoPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE3F6B43ACB398A09DAAC3D /* Pods_UFPhotoPicker.framework */; };
+		F801133921CE177E001D99F5 /* ICHighlightButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F801133721CE177D001D99F5 /* ICHighlightButton.m */; };
+		F801133C21CE19B1001D99F5 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = F801133B21CE19B1001D99F5 /* Base.swift */; };
+		F801133E21CE1A9B001D99F5 /* PhotoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F801133D21CE1A9B001D99F5 /* PhotoProvider.swift */; };
+		F801134121CE1B2C001D99F5 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F801133F21CE1B2C001D99F5 /* AlbumTableViewCell.swift */; };
+		F801134221CE1B2C001D99F5 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F801134021CE1B2C001D99F5 /* PhotoCollectionViewCell.swift */; };
+		F801134521CE1CD9001D99F5 /* UIApplication+Permissions.m in Sources */ = {isa = PBXBuildFile; fileRef = F801134421CE1CD9001D99F5 /* UIApplication+Permissions.m */; };
+		F801134821CE1D3D001D99F5 /* UIButton+EnlargeEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = F801134721CE1D3D001D99F5 /* UIButton+EnlargeEdge.m */; };
 		F859A65621AFB6D8002518CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A65521AFB6D8002518CC /* AppDelegate.swift */; };
 		F859A65821AFB6D8002518CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A65721AFB6D8002518CC /* ViewController.swift */; };
 		F859A65B21AFB6D8002518CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F859A65921AFB6D8002518CC /* Main.storyboard */; };
@@ -19,15 +26,7 @@
 		F859A67621AFB6D9002518CC /* UFPhotoPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A67521AFB6D9002518CC /* UFPhotoPickerUITests.swift */; };
 		F859A68621AFB78E002518CC /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A68421AFB78E002518CC /* AlbumViewController.swift */; };
 		F859A68721AFB78E002518CC /* PhotoGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A68521AFB78E002518CC /* PhotoGridViewController.swift */; };
-		F859A68E21AFB793002518CC /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A68A21AFB793002518CC /* AlbumTableViewCell.swift */; };
-		F859A69021AFB793002518CC /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A68C21AFB793002518CC /* PhotoCollectionViewCell.swift */; };
-		F859A6A221AFB79C002518CC /* PHPhotoLibraryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A69C21AFB79C002518CC /* PHPhotoLibraryExtension.swift */; };
-		F859A6A321AFB79C002518CC /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A69D21AFB79C002518CC /* UIViewExtension.swift */; };
-		F859A6A421AFB79C002518CC /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A69E21AFB79C002518CC /* StringExtension.swift */; };
 		F859A6A521AFB79C002518CC /* PHAssetCollectionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859A69F21AFB79C002518CC /* PHAssetCollectionExtension.swift */; };
-		F8B09AC821C22B420067A2E1 /* PhotoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B09AC721C22B420067A2E1 /* PhotoProvider.swift */; };
-		F8B09ACB21C22B970067A2E1 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B09ACA21C22B970067A2E1 /* Base.swift */; };
-		F8B09ACE21C22BFF0067A2E1 /* UIApplication+Permissions.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B09ACD21C22BFF0067A2E1 /* UIApplication+Permissions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +56,17 @@
 		B0BE9CF2AAA0681DC711C90E /* Pods-UFPhotoPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFPhotoPicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UFPhotoPicker/Pods-UFPhotoPicker.debug.xcconfig"; sourceTree = "<group>"; };
 		BE9DBD6C63973DF53AA0ADF2 /* Pods_UFPhotoPickerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UFPhotoPickerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C20DB4C8ADF4A5617B7D674A /* Pods-UFPhotoPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UFPhotoPicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-UFPhotoPicker/Pods-UFPhotoPicker.release.xcconfig"; sourceTree = "<group>"; };
+		F801133621CE177B001D99F5 /* UFPhotoPicker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UFPhotoPicker-Bridging-Header.h"; sourceTree = "<group>"; };
+		F801133721CE177D001D99F5 /* ICHighlightButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICHighlightButton.m; sourceTree = "<group>"; };
+		F801133821CE177D001D99F5 /* ICHighlightButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICHighlightButton.h; sourceTree = "<group>"; };
+		F801133B21CE19B1001D99F5 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		F801133D21CE1A9B001D99F5 /* PhotoProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoProvider.swift; sourceTree = "<group>"; };
+		F801133F21CE1B2C001D99F5 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumTableViewCell.swift; path = ../../../UFOTO/iCamera/iCameraApp/iCameraApp/Common/EditAlbum/Views/AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		F801134021CE1B2C001D99F5 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoCollectionViewCell.swift; path = ../../../UFOTO/iCamera/iCameraApp/iCameraApp/Common/EditAlbum/Views/PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		F801134321CE1CD8001D99F5 /* UIApplication+Permissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Permissions.h"; sourceTree = "<group>"; };
+		F801134421CE1CD9001D99F5 /* UIApplication+Permissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Permissions.m"; sourceTree = "<group>"; };
+		F801134621CE1D3D001D99F5 /* UIButton+EnlargeEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeEdge.h"; sourceTree = "<group>"; };
+		F801134721CE1D3D001D99F5 /* UIButton+EnlargeEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EnlargeEdge.m"; sourceTree = "<group>"; };
 		F859A65221AFB6D8002518CC /* UFPhotoPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UFPhotoPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F859A65521AFB6D8002518CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F859A65721AFB6D8002518CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,17 +82,7 @@
 		F859A67721AFB6D9002518CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F859A68421AFB78E002518CC /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		F859A68521AFB78E002518CC /* PhotoGridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGridViewController.swift; sourceTree = "<group>"; };
-		F859A68A21AFB793002518CC /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
-		F859A68C21AFB793002518CC /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
-		F859A69C21AFB79C002518CC /* PHPhotoLibraryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHPhotoLibraryExtension.swift; sourceTree = "<group>"; };
-		F859A69D21AFB79C002518CC /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		F859A69E21AFB79C002518CC /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		F859A69F21AFB79C002518CC /* PHAssetCollectionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PHAssetCollectionExtension.swift; sourceTree = "<group>"; };
-		F874892E21B12C5400CDBC32 /* UFPhotoPicker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UFPhotoPicker-Bridging-Header.h"; sourceTree = "<group>"; };
-		F8B09AC721C22B420067A2E1 /* PhotoProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoProvider.swift; sourceTree = "<group>"; };
-		F8B09ACA21C22B970067A2E1 /* Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
-		F8B09ACC21C22BFF0067A2E1 /* UIApplication+Permissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Permissions.h"; sourceTree = "<group>"; };
-		F8B09ACD21C22BFF0067A2E1 /* UIApplication+Permissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Permissions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +136,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F801133A21CE19A5001D99F5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F801133821CE177D001D99F5 /* ICHighlightButton.h */,
+				F801133721CE177D001D99F5 /* ICHighlightButton.m */,
+				F801133B21CE19B1001D99F5 /* Base.swift */,
+				F801133D21CE1A9B001D99F5 /* PhotoProvider.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		F859A64921AFB6D8002518CC = {
 			isa = PBXGroup;
 			children = (
@@ -161,14 +172,13 @@
 		F859A65421AFB6D8002518CC /* UFPhotoPicker */ = {
 			isa = PBXGroup;
 			children = (
-				F8B09AC921C22B8D0067A2E1 /* Common */,
-				F8B09AC621C22B420067A2E1 /* Provider */,
+				F801133A21CE19A5001D99F5 /* Common */,
 				F859A69A21AFB79C002518CC /* Extensions */,
 				F859A68821AFB793002518CC /* Views */,
 				F859A68321AFB78E002518CC /* Controllers */,
+				F801133621CE177B001D99F5 /* UFPhotoPicker-Bridging-Header.h */,
 				F859A65521AFB6D8002518CC /* AppDelegate.swift */,
 				F859A65721AFB6D8002518CC /* ViewController.swift */,
-				F874892E21B12C5400CDBC32 /* UFPhotoPicker-Bridging-Header.h */,
 				F859A65921AFB6D8002518CC /* Main.storyboard */,
 				F859A65C21AFB6D9002518CC /* Assets.xcassets */,
 				F859A65E21AFB6D9002518CC /* LaunchScreen.storyboard */,
@@ -207,8 +217,8 @@
 		F859A68821AFB793002518CC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F859A68A21AFB793002518CC /* AlbumTableViewCell.swift */,
-				F859A68C21AFB793002518CC /* PhotoCollectionViewCell.swift */,
+				F801133F21CE1B2C001D99F5 /* AlbumTableViewCell.swift */,
+				F801134021CE1B2C001D99F5 /* PhotoCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,30 +226,13 @@
 		F859A69A21AFB79C002518CC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F8B09ACC21C22BFF0067A2E1 /* UIApplication+Permissions.h */,
-				F8B09ACD21C22BFF0067A2E1 /* UIApplication+Permissions.m */,
-				F859A69C21AFB79C002518CC /* PHPhotoLibraryExtension.swift */,
-				F859A69D21AFB79C002518CC /* UIViewExtension.swift */,
-				F859A69E21AFB79C002518CC /* StringExtension.swift */,
 				F859A69F21AFB79C002518CC /* PHAssetCollectionExtension.swift */,
+				F801134321CE1CD8001D99F5 /* UIApplication+Permissions.h */,
+				F801134421CE1CD9001D99F5 /* UIApplication+Permissions.m */,
+				F801134621CE1D3D001D99F5 /* UIButton+EnlargeEdge.h */,
+				F801134721CE1D3D001D99F5 /* UIButton+EnlargeEdge.m */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		F8B09AC621C22B420067A2E1 /* Provider */ = {
-			isa = PBXGroup;
-			children = (
-				F8B09AC721C22B420067A2E1 /* PhotoProvider.swift */,
-			);
-			path = Provider;
-			sourceTree = "<group>";
-		};
-		F8B09AC921C22B8D0067A2E1 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				F8B09ACA21C22B970067A2E1 /* Base.swift */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,19 +452,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F859A68E21AFB793002518CC /* AlbumTableViewCell.swift in Sources */,
+				F801134221CE1B2C001D99F5 /* PhotoCollectionViewCell.swift in Sources */,
 				F859A68621AFB78E002518CC /* AlbumViewController.swift in Sources */,
 				F859A65821AFB6D8002518CC /* ViewController.swift in Sources */,
-				F8B09AC821C22B420067A2E1 /* PhotoProvider.swift in Sources */,
+				F801134821CE1D3D001D99F5 /* UIButton+EnlargeEdge.m in Sources */,
+				F801134521CE1CD9001D99F5 /* UIApplication+Permissions.m in Sources */,
+				F801133E21CE1A9B001D99F5 /* PhotoProvider.swift in Sources */,
 				F859A65621AFB6D8002518CC /* AppDelegate.swift in Sources */,
-				F8B09ACB21C22B970067A2E1 /* Base.swift in Sources */,
-				F859A69021AFB793002518CC /* PhotoCollectionViewCell.swift in Sources */,
-				F859A6A421AFB79C002518CC /* StringExtension.swift in Sources */,
-				F859A6A221AFB79C002518CC /* PHPhotoLibraryExtension.swift in Sources */,
-				F859A6A321AFB79C002518CC /* UIViewExtension.swift in Sources */,
+				F801133C21CE19B1001D99F5 /* Base.swift in Sources */,
+				F801133921CE177E001D99F5 /* ICHighlightButton.m in Sources */,
 				F859A68721AFB78E002518CC /* PhotoGridViewController.swift in Sources */,
-				F8B09ACE21C22BFF0067A2E1 /* UIApplication+Permissions.m in Sources */,
 				F859A6A521AFB79C002518CC /* PHAssetCollectionExtension.swift in Sources */,
+				F801134121CE1B2C001D99F5 /* AlbumTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

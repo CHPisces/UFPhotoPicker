@@ -9,9 +9,7 @@
 import UIKit
 import Photos
 
-// swiftlint:disable type_name
-// swiftlint:disable line_length
-// swiftlint:disable identifier_name
+let PuzzleChangeImageNotification = "PuzzleChangeImageNotification"
 
 let appName = L("SweetSelfie")
 
@@ -65,7 +63,7 @@ public func L(_ string: String) -> String {
 // MARK: - 类扩展
 extension UIColor {
     /// 将十六进制颜色转换为UIColor
-    convenience init(hexColor: String) {
+    convenience init(hexColor: String, alpha:CGFloat = 1.0) {
         var pureHexString = hexColor
         if hexColor.hasPrefix("#") {
             pureHexString.remove(at: pureHexString.firstIndex(of: "#")!)
@@ -81,7 +79,7 @@ extension UIColor {
 
         Scanner(string: pureHexString[4..<6]).scanHexInt32(&blue)
 
-        self.init(red: CGFloat(red)/255.0, green: CGFloat(green)/255.0, blue: CGFloat(blue)/255.0, alpha: 1.0)
+        self.init(red: CGFloat(red)/255.0, green: CGFloat(green)/255.0, blue: CGFloat(blue)/255.0, alpha: alpha)
     }
 
     convenience init(r: Int, g: Int, b: Int, a: Int = 255) {
@@ -99,6 +97,10 @@ extension String {
             let endIndex = self.index(self.startIndex, offsetBy: r.upperBound)
             return String(self[startIndex..<endIndex])
         }
+    }
+
+    func replacingLocalizedStringPlaceholder(with string: String) -> String{
+        return self.replacingOccurrences(of: "***", with: string)
     }
 
     ///定位子字符串(NSRange)
@@ -132,6 +134,14 @@ extension String {
     }
 }
 
+extension Array where Element:Equatable {
+    func count(ofElement element :Element) -> Int {
+        return self.filter { (e) -> Bool in
+            return e == element
+        }.count
+    }
+}
+
 extension NSAttributedString {
     func estimatedSize(maxWidth: CGFloat ,attributes: [NSAttributedString.Key : Any] =  [:] ) -> CGSize {
         return string.boundingRect(with: CGSize(width: maxWidth, height: CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attributes, context: nil).size
@@ -147,8 +157,16 @@ extension UILabel {
     }
 
     open func estimatedHeight(withMaxWidth maxWidth: CGFloat ) -> CGFloat {
-        guard let text = self.text else { return 0 }
-        return text.estimatedSize(withFont: self.font, maxWidth: maxWidth).height
+        return estimatedTextSize(withMaxWidth: maxWidth).height
+    }
+
+    open func estimatedWidth(withMaxWidth maxWidth: CGFloat ) -> CGFloat {
+        return estimatedTextSize(withMaxWidth: maxWidth).width
+    }
+
+    open func estimatedTextSize(withMaxWidth maxWidth: CGFloat ) -> CGSize {
+        guard let text = self.text else { return .zero }
+        return text.estimatedSize(withFont: self.font, maxWidth: maxWidth)
     }
 }
 

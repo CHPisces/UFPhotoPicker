@@ -24,7 +24,7 @@ typedef enum {
 -(kPermissionAccess)hasAccessToPhotos;
 -(kPermissionAccess)hasAccessToCamera;
 
--(void)requestAccessToPhotosWithSuccess:(void(^)(void))accessGranted andFailure:(nullable void(^)(void))accessDenied;
--(void)requestAccessToCameraWithSuccess:(void(^)(void))accessGranted andFailure:(nullable void(^)(void))accessDenied;
+-(void)requestAccessToPhotosWithSuccess:(void(^)())accessGranted andFailure:(nullable void(^)())accessDenied;
+-(void)requestAccessToCameraWithSuccess:(void(^)())accessGranted andFailure:(nullable void(^)())accessDenied;
 
 @end

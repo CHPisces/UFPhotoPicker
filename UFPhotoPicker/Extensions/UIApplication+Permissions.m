@@ -80,7 +80,7 @@
     return result;
 }
 
--(void)requestAccessToPhotosWithSuccess:(void(^)(void))accessGranted andFailure:(void(^)(void))accessDenied {
+-(void)requestAccessToPhotosWithSuccess:(void(^)())accessGranted andFailure:(void(^)())accessDenied {
     [PhotoProvider challengePhotoAuthorizationWithSucceedHanlde:^{
         accessGranted();
     } failureHandle:^{
@@ -88,16 +88,38 @@
             accessDenied();
             return ;
         }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Tips" message:@"未开启相册权限" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+            }];
+            UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+
+            }];
+            [alert addAction:cancel];
+            [alert addAction:sure];
+        });
     }];
 }
 
--(void)requestAccessToCameraWithSuccess:(void(^)(void))accessGranted andFailure:(void(^)(void))accessDenied {
+-(void)requestAccessToCameraWithSuccess:(void(^)())accessGranted andFailure:(void(^)())accessDenied {
     [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
         if(granted){
             accessGranted();
         } else if(accessDenied){
             accessDenied();
         } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Tips" message:@"未开启相册权限" preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *sure = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString]];
+                }];
+                UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                    
+                }];
+                [alert addAction:cancel];
+                [alert addAction:sure];
+            });
         }
     }];
 }

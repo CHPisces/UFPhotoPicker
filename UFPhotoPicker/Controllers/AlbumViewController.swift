@@ -9,13 +9,20 @@
 import UIKit
 import Photos
 
-protocol albumDelegate {
+protocol albumDelegate: NSObjectProtocol {
     func selectAlbum(collection: PHCollection)
 }
 
 class AlbumViewController: UITableViewController {
 
-    var delegate: albumDelegate? = nil
+    weak var delegate: albumDelegate? = nil
+
+    var isDarkStyle = false {
+        didSet {
+            self.view.backgroundColor = isDarkStyle ? UIColor(hexColor: "#1F1F22"):.white
+            self.tableView.backgroundColor = isDarkStyle ? UIColor(hexColor: "#1F1F22"):.white
+        }
+    }
 
     // MARK: Properties
     var allAlbums: PHFetchResult<PHAssetCollection>!
@@ -36,22 +43,31 @@ class AlbumViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+
         self.setupUI()
-        self.photoAuthorization()
-        self.fetchAlbumList()
+
+        PhotoProvider.checkAuthorizationStatus { (status) in
+            if status != .authorized {
+
+            } else {
+                DispatchQueue.main.async {
+                    self.fetchAlbumList()
+                }
+            }
+        }
     }
 
     func photoAuthorization() {
         PhotoProvider.checkAuthorizationStatus { (status) in
             if status != .authorized {
-                NSLog("用户未给予相册权限")
+                
             }
         }
+
     }
 
     func setupUI() {
-        self.tableView.backgroundColor = .white
+
         self.tableView.separatorStyle = .none
         self.tableView.rowHeight = 78
         self.tableView.register(AlbumTableViewCell.self, forCellReuseIdentifier: AlbumCellIdentifier)
@@ -72,19 +88,19 @@ class AlbumViewController: UITableViewController {
 fileprivate extension AlbumViewController {
 
     func getThumnail(asset: PHAsset) -> UIImage? {
-        var thumnail: UIImage?
+        var thumbnail: UIImage?
         DispatchQueue.global().sync {
             let options = PHImageRequestOptions()
             options.deliveryMode = .fastFormat
             options.isSynchronous = true
-            options.isNetworkAccessAllowed = false
-            PHImageManager.default().requestImage(for: asset, targetSize: CGSize(width: 200, height: 200), contentMode: .aspectFit, options: options, resultHandler: { image, _ in
+            options.isNetworkAccessAllowed = true
+            _ = PhotoProvider.requestImage(for: asset, targetSize: CGSize(width: 200, height: 200), contentMode: .aspectFit, options: options, resultHandler: { (image, _) in
                 if let image = image {
-                    thumnail = image
+                    thumbnail = image
                 }
             })
         }
-        return thumnail
+        return thumbnail
     }
 
     // PHCollection => (PHCollectionList, PHAssetCollection)
@@ -128,7 +144,8 @@ extension AlbumViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: AlbumTableViewCell = tableView.dequeueReusableCell(withIdentifier: AlbumCellIdentifier, for: indexPath) as! AlbumTableViewCell
-
+        
+        cell.isDarkStyle = self.isDarkStyle
         cell.thumnail = nil
 
         let collection = nonEmptyAllAlbums[indexPath.row]
