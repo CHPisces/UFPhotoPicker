@@ -153,7 +153,10 @@ extension PhotoProvider {
         self.writeMeidaDataToAlbm(withResource: image, completion:completion)
     }
 
-    @objc open class func fetchAssetCollections(with type: PHAssetCollectionType = .smartAlbum, subtype: PHAssetCollectionSubtype = .albumRegular, options: PHFetchOptions? = nil) -> PHFetchResult<PHAssetCollection> {
+    @objc open class func fetchSmartAssetCollections(with type: PHAssetCollectionType = .smartAlbum, subtype: PHAssetCollectionSubtype = .albumRegular, options: PHFetchOptions? = nil) -> PHFetchResult<PHAssetCollection> {
+        if !PhotoProvider.hasAccessToAlbum() {
+            return PHFetchResult()
+        }
         if options == nil {
             let tmpOptions = PHFetchOptions()
             tmpOptions.sortDescriptors = [NSSortDescriptor(key: "startDate", ascending: true)]
@@ -162,13 +165,19 @@ extension PhotoProvider {
        return PHAssetCollection.fetchAssetCollections(with: type, subtype: subtype, options: options)
     }
 
+    @objc open class func fetchUserAssetCollections() -> PHFetchResult<PHCollection> {
+        if !PhotoProvider.hasAccessToAlbum() {
+            return PHFetchResult()
+        }
+        return PHCollectionList.fetchTopLevelUserCollections(with: nil)
+    }
+
     @objc open class  func  fetchAsset(in collection: PHAssetCollection) -> PHFetchResult<PHAsset>{
         if !PhotoProvider.hasAccessToAlbum() {
             return PHFetchResult()
         }
         let options = PHFetchOptions()
         options.predicate = NSPredicate(format: "mediaType = %d", PHAssetMediaType.image.rawValue)
-//        options.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         return PHAsset.fetchAssets(in: collection, options: options)
     }
 
@@ -202,14 +211,12 @@ extension PhotoProvider {
         return PHImageManager.default().requestImage(for:asset, targetSize:targetSize, contentMode:contentMode, options:requestOptions, resultHandler:resultHandler)
     }
 
-    @objc open class func vaildPhotoAssetCollections(inFetchResult result: PHFetchResult<PHAssetCollection> = PhotoProvider.fetchAssetCollections() ,exceptEmptyAlbum: Bool = false) -> [PHAssetCollection] {
-        let pointer = ObjCBool.init(false);
+    @objc open class func vaildPhotoAssetCollections(inFetchResult result: PHFetchResult<PHAssetCollection> = PhotoProvider.fetchSmartAssetCollections() ,exceptEmptyAlbum: Bool = false) -> [PHAssetCollection] {
+        _ = ObjCBool.init(false);
         var collections: [PHAssetCollection] = [];
         var cameraRollCollection: PHAssetCollection? = nil;
         var exceptionalSubtypes: [PHAssetCollectionSubtype] = [PHAssetCollectionSubtype.smartAlbumVideos,PHAssetCollectionSubtype.smartAlbumAllHidden,PHAssetCollectionSubtype.smartAlbumTimelapses,PHAssetCollectionSubtype.smartAlbumSlomoVideos]
         if #available(iOS 11.0, *) {
-            exceptionalSubtypes .append(PHAssetCollectionSubtype.smartAlbumLivePhotos)
-            exceptionalSubtypes .append(PHAssetCollectionSubtype.smartAlbumAnimated)
             exceptionalSubtypes .append(PHAssetCollectionSubtype.smartAlbumLongExposures)
         }
 

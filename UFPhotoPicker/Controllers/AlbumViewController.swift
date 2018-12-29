@@ -25,11 +25,13 @@ class AlbumViewController: UITableViewController {
     }
 
     // MARK: Properties
-    var allAlbums: PHFetchResult<PHAssetCollection>!
-    var nonEmptyAllAlbums: [PHAssetCollection] = []
+    var smartAlbums: PHFetchResult<PHAssetCollection>!
+    var nonEmptySmartAlbums: [PHAssetCollection] = []
+    var userCollections: PHFetchResult<PHCollection>!
+    var userAssetCollections: [PHAssetCollection] = []
     lazy var defaultAlbum: PHAssetCollection? = {
-        if nonEmptyAllAlbums.count > 0 {
-            return nonEmptyAllAlbums.first
+        if nonEmptySmartAlbums.count > 0 {
+            return nonEmptySmartAlbums.first
         }
 
         PhotoProvider.challengePhotoAuthorization(succeedHanlde: {
@@ -38,7 +40,7 @@ class AlbumViewController: UITableViewController {
 
         })
 
-        return nonEmptyAllAlbums.count > 0 ? nonEmptyAllAlbums.first:nil
+        return nonEmptySmartAlbums.count > 0 ? nonEmptySmartAlbums.first:nil
     }()
 
     override func viewDidLoad() {
@@ -57,15 +59,6 @@ class AlbumViewController: UITableViewController {
         }
     }
 
-    func photoAuthorization() {
-        PhotoProvider.checkAuthorizationStatus { (status) in
-            if status != .authorized {
-                
-            }
-        }
-
-    }
-
     func setupUI() {
 
         self.tableView.separatorStyle = .none
@@ -74,8 +67,11 @@ class AlbumViewController: UITableViewController {
     }
 
     func fetchAlbumList() {
-        allAlbums =  PhotoProvider.fetchAssetCollections()
-        nonEmptyAllAlbums = PhotoProvider.vaildPhotoAssetCollections(inFetchResult: allAlbums, exceptEmptyAlbum: true)
+        smartAlbums =  PhotoProvider.fetchSmartAssetCollections()
+        nonEmptySmartAlbums = PhotoProvider.vaildPhotoAssetCollections(inFetchResult: smartAlbums, exceptEmptyAlbum: true)
+        userCollections = PhotoProvider.fetchUserAssetCollections()
+        userAssetCollections = updatedUserAssetCollection()
+
         PHPhotoLibrary.shared().register(self)
     }
 
@@ -122,13 +118,27 @@ fileprivate extension AlbumViewController {
     func updatedNonEmptyAlbums() -> [PHAssetCollection] {
         var curNonEmptyAlbums: [PHAssetCollection] = []
 
-        allAlbums.enumerateObjects({ (collection, start, stop) in
+        smartAlbums.enumerateObjects({ (collection, start, stop) in
             if collection.imagesCount > 0 {
                 curNonEmptyAlbums.append(collection)
             }
         })
 
         return curNonEmptyAlbums
+    }
+
+    func updatedUserAssetCollection() -> [PHAssetCollection] {
+        var curUserAssetColelctions: [PHAssetCollection] = []
+
+        userCollections.enumerateObjects({ [weak self] (collection, start, stop) in
+            if let assetCollection = collection as? PHAssetCollection {
+                curUserAssetColelctions.append(assetCollection)
+            } else if let collectionList = collection as? PHCollectionList {
+                curUserAssetColelctions.append(contentsOf: self!.flattenCollectionList(collectionList))
+            }
+        })
+
+        return curUserAssetColelctions
     }
 }
 
@@ -139,7 +149,7 @@ extension AlbumViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return nonEmptyAllAlbums.count
+        return nonEmptySmartAlbums.count + userAssetCollections.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -148,20 +158,36 @@ extension AlbumViewController {
         cell.isDarkStyle = self.isDarkStyle
         cell.thumnail = nil
 
-        let collection = nonEmptyAllAlbums[indexPath.row]
-        cell.title = collection.localizedTitle
-        cell.count = collection.imagesCount
-        if let firstImage = collection.newestImage() {
-            cell.thumnail = getThumnail(asset: firstImage)
+        if nonEmptySmartAlbums.count > indexPath.row {
+            let collection = nonEmptySmartAlbums[indexPath.row]
+            cell.title = collection.localizedTitle
+            cell.count = collection.imagesCount
+            if let firstImage = collection.newestImage() {
+                cell.thumnail = getThumnail(asset: firstImage)
+            }
+            return cell
+        }else if userAssetCollections.count > indexPath.row - nonEmptySmartAlbums.count {
+            let collection = userAssetCollections[indexPath.row - nonEmptySmartAlbums.count]
+            cell.title = collection.localizedTitle
+            cell.count = collection.imagesCount
+            if let firstImage = collection.newestImage() {
+                cell.thumnail = getThumnail(asset: firstImage)
+            }
+            return cell
         }
-        return cell
+
+        return cell;
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        var collection: PHCollection
+        var collection: PHCollection = PHCollection.init()
 
-        collection = nonEmptyAllAlbums[indexPath.row]
+        if nonEmptySmartAlbums.count > indexPath.row {
+            collection = nonEmptySmartAlbums[indexPath.row]
+        }else if userAssetCollections.count > indexPath.row - nonEmptySmartAlbums.count {
+            collection = userAssetCollections[indexPath.row - nonEmptySmartAlbums.count]
+        }
 
         if delegate != nil {
             delegate?.selectAlbum(collection: collection)
@@ -176,9 +202,13 @@ extension AlbumViewController: PHPhotoLibraryChangeObserver {
 
     func photoLibraryDidChange(_ changeInstance: PHChange) {
 
-        if let changeDetails = changeInstance.changeDetails(for: allAlbums) {
-            allAlbums = changeDetails.fetchResultAfterChanges
-            nonEmptyAllAlbums = updatedNonEmptyAlbums()
+        if let changeDetails = changeInstance.changeDetails(for: smartAlbums) {
+            smartAlbums = changeDetails.fetchResultAfterChanges
+            nonEmptySmartAlbums = updatedNonEmptyAlbums()
+        }
+        if let changeDetails = changeInstance.changeDetails(for: userCollections) {
+            userCollections = changeDetails.fetchResultAfterChanges
+            userAssetCollections = updatedUserAssetCollection()
         }
 
         DispatchQueue.main.async {
